@@ -45,9 +45,9 @@ Tsunami Protocol is a trading protocol of decentralized orderbooks. Users can cr
 
 From a functional perspective, key implementation and standard definition of Tsunami Protocol are shown below.
 
-![Figure 1](https://github.com/HashPocket/TsunamiProtocol/raw/b9094d3ec0361c77873a5f796d70b6601b3de4a0/images/Figure_1.png)
+![Figure 1](https://raw.githubusercontent.com/HashPocket/TsunamiProtocol/master/images/Figure_1.png)
 
-![Figure 2](https://github.com/HashPocket/TsunamiProtocol/raw/b9094d3ec0361c77873a5f796d70b6601b3de4a0/images/Figure_2.png)
+![Figure 2](https://raw.githubusercontent.com/HashPocket/TsunamiProtocol/master/images/Figure_2.png)
 
 1. Maker establishes Maker Puzzle and Taker Puzzle based on order information. Taker Puzzle contains order information, such as the address and order amount of Makers. Taker Puzzle Hash and related order information are included in the Maker Puzzle. Maker Coin (Its puzzle is called Maker Puzzle and amount is called Maker Amount) is generated when Maker uses the corresponding wallet (Standard Wallet or Colorful Wallet).
 2. According to the public Tsunami Gateway Puzzle, Gateway Coin is generated temporarily. Order params are passed to gateway when you make a solution contains order data to spend the gateway coin.
@@ -92,7 +92,7 @@ We will open-source Tsunami_GATEWAY_PUZZLE which can be called by any user. Actu
 ### Match Orders
 Users can create their Taker Puzzle which contains order information, such as Maker’s address and amount, after querying the Solution of Maker Coin and Gateway Coin through Broker. Once the Spend Bundle, which is composed of Gateway Coin Spend and Maker Coin Spend, is broadcast to the network, and gets included in a block, the transaction is completed.
 
-![Figure 3](https://github.com/HashPocket/TsunamiProtocol/raw/b9094d3ec0361c77873a5f796d70b6601b3de4a0/images/Figure_3.png)
+![Figure 3](https://raw.githubusercontent.com/HashPocket/TsunamiProtocol/master/images/Figure_3.png)
 
 To fill the order, firstly, users must create Taker Coin according to the order information. And then spend both Maker Coin and Taker Coin to ensure the integrity of the transaction, mainly to ensure that the information of Taker Coin (transfer address, transaction price and amount) is correct. The address is embedded in the PUZZLE, and the transaction price and amount are submitted in Solution. In order to ensure proper execution of TAKER COIN, all these information is collected in the Message of CREATE_PUZZLE_ANNOUNCEMENT and use ASSERT_PUZZLE_ANNOUNCEMENT in Maker Coin.
 
@@ -110,7 +110,7 @@ When users are placing orders, they do not know whether they play the role as a 
 
 When users initiate a market order, firstly, they need to choose one order or multiple combined orders which meet the conditions in the orderbooks and merge all the transactions in one SpendBundle. Users sign transactions and wait until the order is filled. If there is not such an order, a limit order is generated and waits for other users to fill.
 
-![Figure 4](https://github.com/HashPocket/TsunamiProtocol/raw/b9094d3ec0361c77873a5f796d70b6601b3de4a0/images/Figure_4.png)
+![Figure 4](https://raw.githubusercontent.com/HashPocket/TsunamiProtocol/master/images/Figure_4.png)
 
 ### Order History
 Users can get their full transaction history by running the open-source Tsunami Client. In fact, Tsunami Client just help users filter the pubkey of orders. When the pub key of orders matches the users, then that order belongs to that user.
