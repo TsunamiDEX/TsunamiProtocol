@@ -21,17 +21,6 @@ Bitcoin itself has limitations such as its Turing-incomplete scripting system an
 
 Chia, however, makes all this possible. It makes Coin a first-class citizen and brings Chialisp, which is not as easy to understand as the account model of Ethereum, but this transformation makes UTXO-based DeFi a reality on Chia. As the superset of Lisp, Chialisp brings the advantage of Lisp into Chia’s Smart Coin. The coin set model and Chialisp complement each other.
 
-### Why CLOB?
-Why do we prefer to achieve CLOB(Central Limit Order Book), compared with AMM?
-
-Reasons are shown below.
-1. The efficiency of AMM's price discovery is quite low.
-2. AMM can not provide liquidity for specific prices.
-3. AMM requires users to add liquidity to both sides.
-4. In AMM, users can not quote prices according to their wills.
-5. AMM has larger slippages in the big deal.
-6. In AMM, the liquidity is fragmented and trapped in pools respectively.
-
 ### Vision for Tsunami Protocol
 The foundation of Tsunami Protocol is based on Chialisp. Numerous computations are done off chain and verification are done on chain, which means Tsunami Protocol can almost expand capacity unlimitedly. Moreover, Smart Coin, based on Chialisp, can use formal verification to ensure security, which makes the contract more reliable and auditable.
 
